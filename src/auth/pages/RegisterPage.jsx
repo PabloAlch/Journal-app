@@ -13,7 +13,7 @@ import { AuthLayout } from '../layout/AuthLayout'
     displayName: ''
   }
 
-  const formValidations ={
+  const formValidations = {
     email: [(value) => value.includes('@') , 'El correo debe de tener una @.'],
     password: [(value) => value.length >= 6 , 'El password debe de tener ,ás de 6 letras.'],
     displayName: [(value) => value.length >= 1 , 'El nombre es obligatorio.']
@@ -46,9 +46,9 @@ export const RegisterPage = () => {
   return (
     
       <AuthLayout title='Crear cuenta'>
-        <h1>FormValid { isFormValid ? 'Valido' : 'Incorrecto' }</h1>
+        {/* <h1>FormValid { isFormValid ? 'Valido' : 'Incorrecto' }</h1> */}
 
-          <form onSubmit={ onSubmit }>
+          <form onSubmit={ onSubmit } className='animate__animated animate__fadeIn animate__faster'>
             <Grid container>
               <Grid item xs={ 12 } sx={{ mt: 2}}>
                 <TextField 
